@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bobby Pachuau Portfolio</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bobby Pachuau Portfolio V3</title>
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#000;color:#fff}
-section{padding:80px 20px;border-bottom:1px solid rgba(255,255,255,.08)}
-.hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.8)),url('profile.jpg') center/cover;display:flex;align-items:center}
-.container{max-width:1100px;margin:auto}
-h1{font-size:56px;margin:0 0 10px}
-h2{font-size:38px}
-p{color:#cfcfcf;line-height:1.8}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card,img.work{width:100%;border-radius:18px;background:#111}
-.card{padding:30px;text-align:center}
-.contact p{margin:8px 0}
-</style>
-</head>
+html{scroll-behavior:smooth} body{margin:0;font-family:Arial,sans-serif;background:#000;color:#fff}
+section{padding:100px 24px;border-bottom:1px solid rgba(255,255,255,.08)}
+.hero{min-height:100vh;background:linear-gradient(to right,rgba(0,0,0,.95),rgba(0,0,0,.6)),url('profile.jpg') center/cover;display:flex;align-items:center}
+.container{max-width:1150px;margin:auto} h1{font-size:64px;line-height:1.1} h2{font-size:46px}
+p{color:#d0d0d0;line-height:1.9}.btn{padding:14px 28px;border-radius:14px;text-decoration:none;display:inline-block;margin-right:10px}
+.btn1{background:#fff;color:#000}.btn2{border:1px solid rgba(255,255,255,.3);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+img{width:100%;border-radius:28px;cursor:pointer;transition:.3s}.card{background:#111;padding:35px;border-radius:28px;text-align:center;transition:.3s}
+.card:hover,img:hover{transform:translateY(-6px) scale(1.02)} .wa{position:fixed;right:20px;bottom:20px;background:#fff;color:#000;padding:14px 20px;border-radius:30px;text-decoration:none;font-weight:bold}
+#lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);justify-content:center;align-items:center;padding:20px} #lightbox img{max-width:90%;max-height:90%}
+</style></head>
 <body>
-<section class="hero"><div class="container"><h1>Visuals That Speak Louder Than Words</h1><p>BOBBY PACHUAU • Graphic Designer • Social Media Marketer</p></div></section>
-<section><div class="container"><h2>About Me</h2><p>I am Bobby Pachuau, a passionate Graphic Designer and Social Media Marketer with over 3 years of professional experience in building striking visual communication for modern audiences. My work combines bold aesthetics, adaptive styling, and strategic market awareness.</p></div></section>
-<section><div class="container"><h2>Featured Works</h2><div class="grid">
-<img class="work" src="work1.png"><img class="work" src="work2.png"><img class="work" src="work3.jpg"><img class="work" src="work4.png">
+<section class="hero"><div class="container"><p style="letter-spacing:7px;color:#777">ULTRA PREMIUM PORTFOLIO</p><h1>Interactive Visual Experiences For Modern Brands</h1><p>Bobby Pachuau — Graphic Designer • Social Media Marketer</p><a href="#works" class="btn btn1">Explore Projects</a><a href="#contact" class="btn btn2">Hire Me</a></div></section>
+<section><div class="container grid" style="align-items:center"><div><img src="profile.jpg"></div><div><h2>About Bobby</h2><p>A visual storyteller with 3+ years of experience crafting modern promotional graphics, social campaigns, and branded content. I merge aesthetics with marketing functionality to create memorable brand visuals.</p></div></div></section>
+<section id="works"><div class="container"><h2 style="text-align:center">Interactive Featured Projects</h2><div class="grid">
+<img src="work1.png" onclick="openImg(this.src)"><img src="work2.png" onclick="openImg(this.src)"><img src="work3.jpg" onclick="openImg(this.src)"><img src="work4.png" onclick="openImg(this.src)">
 </div></div></section>
-<section><div class="container"><h2>Services</h2><div class="grid"><div class="card">Flyers & Posters</div><div class="card">Brochures & Branding</div><div class="card">Social Media Creatives</div><div class="card">Event Promotions</div></div></div></section>
-<section class="contact"><div class="container"><h2>Contact</h2><p>Instagram: @muan.thv</p><p>WhatsApp: 8730954528</p><p>Email: pachuau1360@gmail.com</p></div></section>
+<section><div class="container"><h2 style="text-align:center">Creative Services</h2><div class="grid"><div class="card">Brand Posters</div><div class="card">Brochure Layouts</div><div class="card">Social Media Campaigns</div><div class="card">Marketing Visuals</div></div></div></section>
+<section id="contact"><div class="container" style="text-align:center"><h2>Let's Create Impactful Visuals</h2><p>Instagram: @muan.thv<br>WhatsApp: 8730954528<br>Email: pachuau1360@gmail.com</p></div></section>
+<a class="wa" href="https://wa.me/918730954528">WhatsApp Me</a>
+<div id="lightbox" onclick="this.style.display='none'"><img id="lightimg"></div>
+<script>
+function openImg(src){document.getElementById('lightbox').style.display='flex';document.getElementById('lightimg').src=src;}
+</script>
 </body></html>
